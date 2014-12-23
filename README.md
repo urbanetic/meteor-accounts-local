@@ -4,7 +4,7 @@ Creates local users and an admin from a private asset.
 
 ## Usage
 
-Call `AccountsLocal.setup(users)` on the server with the users configuration, which should be a map of usernames to user details:
+Call `AccountsLocal.config(users)` on the server with the users configuration, which should be a map of usernames to user details:
 
 ```
 {
@@ -28,7 +28,7 @@ A `private/users.json` file could be used for this along with the following code
 ```
 Meteor.startup(function() {
   var users = JSON.parse(Assets.getText('users.json'));
-  AccountsLocal.setup(users);
+  AccountsLocal.config(users);
 });
 ```
 

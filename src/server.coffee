@@ -1,6 +1,6 @@
 AccountsLocal =
 
-  setup: (users) ->
+  config: (users) ->
     env = process.env
 
     # Create an admin user from environment variables if needed.
@@ -8,7 +8,7 @@ AccountsLocal =
       METEOR_ADMIN_PASSWORD = env.METEOR_ADMIN_PASSWORD
       METEOR_ADMIN_EMAIL = env.METEOR_ADMIN_EMAIL
       unless METEOR_ADMIN_PASSWORD
-        throw new Error('Admin user details not provided in AccountsLocal.setup() or with ' +
+        throw new Error('Admin user details not provided in AccountsLocal.config() or with ' +
           'environment variables.')
       users.admin =
         name: 'Admin'
