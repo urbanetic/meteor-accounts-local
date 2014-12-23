@@ -11,5 +11,5 @@ Package.on_use(function(api) {
   api.add_files([
     'src/server.coffee'
   ], 'server');
-  api.export('AccountsAurin', 'client');
+  api.export('AccountsLocal', 'server');
 });

@@ -4,7 +4,7 @@ Creates local users and an admin from a private asset.
 
 ## Usage
 
-A `private/users.json` file must exist from the application root. It is a map of usernames to user details:
+Call `AccountsLocal.setup(users)` on the server with the users configuration, which should be a map of usernames to user details:
 
 ```
 {
@@ -23,6 +23,15 @@ A `private/users.json` file must exist from the application root. It is a map of
 }
 ```
 
-The admin user credentials must be set in either the `users.json` or using the following environment variables (recommended): `METEOR_ADMIN_PASSWORD`, `METEOR_ADMIN_EMAIL`.
+A `private/users.json` file could be used for this along with the following code on the server:
+
+```
+Meteor.startup(function() {
+  var users = JSON.parse(Assets.getText('users.json'));
+  AccountsLocal.setup(users);
+});
+```
+
+A single admin user with the username "admin" is expected. The details can be passed in the users configuration or set using the following environment variables: `METEOR_ADMIN_PASSWORD`, `METEOR_ADMIN_EMAIL`.
 
 Updating the `users.json` file and restarting the server will update the details of the users. To prevent this, add the following property to the user details: `update: false`.
