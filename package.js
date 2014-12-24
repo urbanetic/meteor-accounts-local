@@ -8,7 +8,7 @@ Package.describe({
 Package.on_use(function(api) {
   api.versionsFrom('METEOR@0.9.0');
   api.use(['coffeescript', 'underscore', 'accounts-password'], 'server');
-  api.use(['digilord:roles'], 'server', {weak:true});
+  api.use(['digilord:roles@1.2.12'], 'server', {weak:true});
   api.add_files([
     'src/server.coffee'
   ], 'server');
