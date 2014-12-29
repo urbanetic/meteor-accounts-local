@@ -1,6 +1,6 @@
 # accounts-local
 
-Creates local users and an admin from a private asset.
+Creates local users and an admin.
 
 ## Usage
 

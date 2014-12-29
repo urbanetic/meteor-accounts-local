@@ -1,6 +1,6 @@
 Package.describe({
   name: 'urbanetic:accounts-local',
-  summary: 'Creates local users and an admin from a private asset.',
+  summary: 'Creates local users and an admin.',
   git: 'https://github.com/urbanetic/meteor-accounts-local.git',
   version: '0.1.0'
 });
