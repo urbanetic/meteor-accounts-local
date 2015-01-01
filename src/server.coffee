@@ -39,4 +39,4 @@ AccountsLocal =
         delete user.password
         Roles.setUserRoles(user._id, userArgs.roles)
         action = if existing then 'Created' else 'Updated'
-        console.log(action + ' user:', user)
+        console.log(action + ' user:', username)
