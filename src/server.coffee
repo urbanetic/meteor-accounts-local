@@ -29,7 +29,7 @@ AccountsLocal =
         return if existing && userArgs.update == false
         Meteor.users.upsert(selector, {$set: {
           username: username
-          email: userArgs.email
+          emails: [userArgs.email]
           'profile.name': userArgs.name
         }})
         user = Meteor.users.findOne(selector)
