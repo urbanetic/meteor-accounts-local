@@ -7,9 +7,15 @@ Package.describe({
 
 Package.on_use(function(api) {
   api.versionsFrom('METEOR@0.9.0');
-  api.use(['coffeescript', 'underscore', 'accounts-password'], 'server');
-  api.use(['digilord:roles@1.2.12'], 'server', {weak:true});
-  api.add_files([
+  api.use([
+    'coffeescript',
+    'underscore',
+    'accounts-password',
+    'aramk:utility@0.8.3',
+    'digilord:roles@1.2.12'
+  ], 'server');
+  api.imply(['digilord:roles']);
+  api.addFiles([
     'src/server.coffee'
   ], 'server');
   api.export('AccountsLocal', 'server');
