@@ -16,7 +16,7 @@ Package.on_use(function(api) {
   ], 'server');
   api.imply(['digilord:roles']);
   api.addFiles([
-    'src/server.coffee'
+    'src/AccountsLocal.coffee'
   ], 'server');
   api.export('AccountsLocal', 'server');
 });

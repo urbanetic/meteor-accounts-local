@@ -1,6 +1,7 @@
 AccountsLocal =
 
   config: (users) ->
+    users ?= {}
     env = process.env
 
     # Create an admin user from environment variables if needed.
