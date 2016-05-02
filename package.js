@@ -11,7 +11,7 @@ Package.on_use(function(api) {
     'coffeescript',
     'underscore',
     'accounts-password',
-    'aramk:utility@0.8.3',
+    'urbanetic:utility@1.0.0',
     'digilord:roles@1.2.12'
   ], 'server');
   api.imply(['digilord:roles']);
