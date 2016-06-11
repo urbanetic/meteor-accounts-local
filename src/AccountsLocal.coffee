@@ -17,8 +17,10 @@ AccountsLocal =
         email: env.METEOR_ADMIN_EMAIL
         roles: ['admin']
         # Admin password and email will always update on server restart based on the environment
-        # variables.
-        update: true
+        # variables. Set METEOR_ACCOUNTS_LOCAL_UPDATE to '0' to prevent updating existing users.
+        # This prevents needing to log in after each live reload in Meteor (due to the update
+        # changing the user).
+        update: if process.env.METEOR_ACCOUNTS_LOCAL_UPDATE == '0' then false else true
 
     # Create all other users in the user.json.
     _.each users, (userArgs, username) ->
