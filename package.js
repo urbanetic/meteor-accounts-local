@@ -2,16 +2,16 @@ Package.describe({
   name: 'urbanetic:accounts-local',
   summary: 'Creates local users and an admin.',
   git: 'https://github.com/urbanetic/meteor-accounts-local.git',
-  version: '0.1.4'
+  version: '1.0.0'
 });
 
 Package.on_use(function(api) {
-  api.versionsFrom('METEOR@1.4.0.1');
+  api.versionsFrom('METEOR@1.6.1');
   api.use([
     'coffeescript',
     'underscore',
     'accounts-password',
-    'urbanetic:utility@1.0.0',
+    'urbanetic:utility@2.0.0',
     'digilord:roles@1.2.12'
   ], 'server');
   api.imply(['digilord:roles']);
